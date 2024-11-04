@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techsecure - Segurança de Eventos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2a2e33;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #2a2e33;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .nav-link.active {
+            font-weight: bold;
+            color: #ffd700 !important;
+        }
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        /* Toast */
+        .toast {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ffd700;
+            color: #2a2e33;
+        }
+
+        /* Estilos do Main */
+        main {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .form-select {
+            max-width: 250px;
+        }
+
+        /* Cards de serviços */
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.03);
+        }
+        .card-title {
+            color: #2a2e33;
+        }
+        .card-footer {
+            background-color: #f9f9f9;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2a2e33;
+            color: #fff;
+            padding: 40px 0;
+        }
+        footer h5 {
+            color: #ffd700;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            background-color: #1d2023;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toast de alerta -->
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="path/to/image1.jpg" class="rounded me-2" alt="Imagem" width="30">
+            <strong class="me-auto">Techsecure</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Venha conferir nossas ofertas de segurança para eventos!
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="path/to/logo.png" alt="Techsecure Logo" width="40" class="me-2">Techsecure</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nossos Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="container mt-4">
+        <h1>Bem-vindo ao Techsecure</h1>
+        <p>Aqui você encontra as melhores soluções para segurança em eventos, garantindo proteção e tranquilidade. Nossos serviços variam de monitoramento a suporte em emergências.</p>
+        
+        <select class="form-select form-select-sm mb-4" aria-label="Menu de produtos">
+            <option selected>Menu de serviços</option>
+            <option value="1">Monitoramento</option>
+            <option value="2">Segurança Portaria</option>
+            <option value="3">Emergências</option>
+            <option value="4">Consultoria em Segurança</option>
+        </select>
+
+        <h2 class="text-center mb-4">Nossos Serviços em Destaque</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="path/to/monitoring.jpg" class="card-img-top" alt="imagem de monitoramento">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitoramento de Eventos</h5>
+                        <p class="card-text">Sistemas de monitoramento em tempo real para garantir a segurança do seu evento.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Última atualização há 3 mins</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="path/to/security.jpg" class="card-img-top" alt="imagem de segurança">
+                    <div class="card-body">
+                        <h5 class="card-title">Segurança na Portaria</h5>
+                        <p class="card-text">Equipe treinada para garantir o acesso controlado e a segurança do evento.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Última atualização há 3 mins</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="path/to/consulting.jpg" class="card-img-top" alt="imagem de consultoria">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultoria em Segurança</h5>
+                        <p class="card-text">Análise completa e sugestões para aumentar a segurança do seu evento.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Última atualização há 3 mins</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Sobre o Techsecure</h5>
+                    <p><img src="path/to/footer-image.jpg" alt="Imagem do Techsecure" width="100" class="me-3">Oferecemos soluções de segurança personalizadas para eventos de todos os tamanhos em todo o Brasil!</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links Úteis</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="text-light">Sobre Nós</a></li>
+                        <li><a href="#" class="text-light">Contato</a></li>
+                        <li><a href="#" class="text-light">Termos de Serviço</a></li>
+                        <li><a href="#" class="text-light">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Redes Sociais</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="text-light">Facebook</a></li>
+                        <li><a href="#" class="text-light">Instagram</a></li>
+                        <li><a href="#" class="text-light">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center p-3">
+            © 2024 Techsecure. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA5Q4K8sDeE2/xQT2hNuB7BvR+F5wp5mghBO6V8QxFtdH" crossorigin="anonymous"></script>
+</body>
+</html>
